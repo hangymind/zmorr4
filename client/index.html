@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://s11.aconvert.com/convert/p3r68-cdx67/udga8-hi0yc-001.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JB.io</title>
+  </head>
+  <body>
+    <div id="loader" style="width: 100%; height: 100%; position: fixed; top: 0; left: 0; background-color: #000000; color: #FFFFFF; font-family: 'Ubuntu', sans-serif; font-size: 100px; z-index: 1000; display: grid; place-content: center;">Loading...</div>
+    <div id="floer-version" >Moded by iw46</div>
+    <div id="in-game-screen">
+        <canvas id="canvas"></canvas>
+        <div id="hud">
+            <div id="move-right" style="display: none">
+                <div style="font-size: 25px" textStroke="MOVE RIGHT!">MOVE RIGHT!</div>
+                <div style="font-size: 15px" textStroke="You are overleveled for this zone.">You are overleveled for this zone.</div>
+                <div style="font-size: 15px" textStroke="You will be unable to attack after">You will be unable to attack after</div>
+                <div id="move-right-time" style="font-size: 25px; color:indianred" textStroke="6s">6s</div>
+            </div>
+
+            <div id="chat-box">
+                <div id="chat-messages"></div>
+                <div id="chat-send">
+                    <div id="chat-channel">[Global]</div>
+                    <input type="text" id="chat-input" maxlength="40" placeholder="Press [ENTER] or click here to chat">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="game-over-screen">
+        <div id="game-over-title" textStroke="You were destroyed by:">
+            You were destroyed by:
+        </div>
+        <div id="game-over-murderer" textStroke="M28">M28</div>
+        <div id="game-over-kills" textStroke="You killed 0 flowers this run.">You killed 0 flowers this run.</div>
+        <div id="btn-continue" class="btn btn-green" textStroke="Continue">Continue</div>
+    </div>
+    <div id="out-game-screen">
+        <a id="qq-box" target="_blank" class="btn" href="https://github.com/c2x2n/floer.io" textStroke="Github">
+            Github
+        </a>
+        
+        <div id="main">
+            <span id="title" textStroke="Zmorr.fun">Zmorr.fun</span>
+            <div class="line-container">
+                <input id="name" value="">
+                <div id="btn-ready" class="btn btn-green" textStroke="Ready">Ready</div>
+            </div>
+            <div class="petal-column column-container">
+                <div class="equipped-petals-row"></div>
+                <div class="preparation-petals-row"></div>
+            </div>
+        </div>
+        <div id="dialog-container">
+            <div class="dialog" id="settings-dialog">
+                <div class="dialog-content">
+                    <input type="checkbox" id="keyboard-movement"/>
+                    <div textStroke="Keyboard Movement">Keyboard Movement</div>
+                </div>
+
+                <div class="dialog-content">
+                    <input type="checkbox" id="new-control"/>
+                    <div textStroke="Enable New Control System">Enable New Control System</div>
+                </div>
+
+                <div class="dialog-content">
+                    <input type="checkbox" id="low-resolution"/>
+                    <div textStroke="Low Resolution Graphics (Refresh the page to enable)">Low Resolution Graphics (Refresh the page to enable)</div>
+                </div>
+
+                <div class="dialog-content">
+                    <input type="checkbox" id="block-myt-ann"/>
+                    <div textStroke="Block Mythic Announcement">Block Mythic Announcement</div>
+                </div>
+            </div>
+        </div>
+        <div id="bottom-left-buttons">
+           
+            <button id="btn-settings" class="btn btn-gray btn-big-block"></button>
+        </div>
+    </div>
+    <script>
+        // 确保DOM完全加载后再开始计时
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.getElementById('loader').style.display = 'none';
+            }, 3000);
+        });
+    </script>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+# Build
+dist/
+
+# Node
+node_modules/
+
+# IDE garbage
+.idea
+.DS_Store
+.vscode
+*.kate-swp
+.history
+
+# Databases
+*.db
+
+*.env
+
+# Local Netlify folder
+.netlify
