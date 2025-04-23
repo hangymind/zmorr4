@@ -1,5 +1,5 @@
 export const Config: ServerConfig = {
-    host: "0.0.0.0",
+    host: "zmorr.netlify.app",
     port: 12563,
     tps: 30,
     adminSecret: "z"
